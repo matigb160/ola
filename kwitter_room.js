@@ -9,3 +9,12 @@ var firebaseConfig = {
   
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
+  user_name=localStorage.getItem("user_name");
+  room_name=localStorage.getItem("room_name");
+
+  document.getElementById("user_name").innerHTML="hola "+user_name+"<3 (:";
+  function logout(){
+    localStorage.removeItem("user_name");
+    localStorage.removeItem("room_name");
+    window.location.replace("index.html");
+  }
